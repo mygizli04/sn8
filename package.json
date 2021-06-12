@@ -17,9 +17,11 @@
   },
   "homepage": "https://github.com/mygizli04/sn8#readme",
   "dependencies": {
+    "@types/mongodb": "^3.6.17",
     "@types/node": "^15.12.2",
     "discord-buttons": "^3.2.1",
     "discord.js": "^12.5.3",
-    "dotenv": "^10.0.0"
+    "dotenv": "^10.0.0",
+    "mongodb": "^3.6.9"
   }
 }
