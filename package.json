@@ -1,0 +1,23 @@
+{
+  "name": "sn8",
+  "version": "1.0.0",
+  "description": "Coolest snake bot in town",
+  "main": "./out/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mygizli04/sn8.git"
+  },
+  "author": "mygizli04 and MrEnxo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mygizli04/sn8/issues"
+  },
+  "homepage": "https://github.com/mygizli04/sn8#readme",
+  "dependencies": {
+    "discord-button": "^1.0.3",
+    "discord.js": "^12.5.3"
+  }
+}
