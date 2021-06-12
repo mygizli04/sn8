@@ -1,0 +1,22 @@
+on:
+  push:
+
+jobs:
+  tsc:
+    name: tsc
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: install node
+      uses: actions/setup-node@v1
+      with:
+        node-version: 12
+    - name: Install dependencies
+      run: npm i typescript
+    - name: Transpile
+      run: tsc -p .
+    - name: Upload
+      uses: actions/upload-artifact@v2
+      with:
+        name: Final javascript
+        path: out
