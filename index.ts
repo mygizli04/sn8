@@ -15,7 +15,7 @@ let userdata: any;
 let guilddata: any;
 
 // Oh it's deprecated? WHY NOT UPDATE YOUR DOCS TO GIVE BETTER INSTRUCTIONS THEN HUH
-const db = mongo.MongoClient.connect(process.env.dbURL as string, (err, dbClient) => {
+mongo.MongoClient.connect(process.env.dbURL as string, (err, dbClient) => {
 	if (!err) {
 		console.log("Connected to the mongoDB database!")
 		database = dbClient.db('sn8')
@@ -199,17 +199,17 @@ function renderSnek(snek: snek) {
 	snek.gameState.sneknodes.forEach((point: Vector2) => {
 		state[point.y][point.x] = 1
 	});
-	state.forEach((y, index) => {
-		y.forEach((x, index) => {
+	state.forEach(y => {
+		y.forEach(x => {
 			switch (x) {
 				case 0:
-					msg += "\\⬛"
+					msg += "⬛"
 				break
 				case 1:
-					msg += "\\🟨"
+					msg += "🟨"
 				break
 				case 2:
-					msg += "\\🍎"
+					msg += "🍎"
 				break
 				default:
 					debugger
