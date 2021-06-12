@@ -18,7 +18,7 @@
   "homepage": "https://github.com/mygizli04/sn8#readme",
   "dependencies": {
     "@types/node": "^15.12.2",
-    "discord-button": "^1.0.3",
+    "discord-buttons": "^3.2.1",
     "discord.js": "^12.5.3",
     "dotenv": "^10.0.0"
   }
