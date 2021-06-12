@@ -1,0 +1,3 @@
+[submodule "discord-buttons"]
+	path = discord-buttons
+	url = https://github.com/AngeloCore/discord-buttons
