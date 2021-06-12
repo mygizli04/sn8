@@ -1,6 +1,5 @@
 on:
   push:
-  pull_request:
 
 jobs:
   tsc:
@@ -8,11 +7,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
-    - name: install node v12
+    - name: install node
       uses: actions/setup-node@v1
       with:
         node-version: 12
-    - name: npm i
-      run: npm i
-    - name: tsc
-      uses: icrawl/action-tsc@v1
+    - name: Install dependencies
+      run: npm i typescript
+    - name: Transpile
+      run: tsc -p .
+    - name: Upload
+      uses: actions/upload-artifact@v2
+      with:
+        name: Final javascript
+        path: out
