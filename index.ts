@@ -7,6 +7,8 @@ import * as snake from './snake'
 import * as sn8 from './interface'
 dotenv.config()
 
+// all of this was made by sbeve
+
 const client = new discord.Client()
 buttons.default(client)
 
@@ -75,12 +77,14 @@ client.on('message', async message => {
 				break
 				case 'coin':
 					userdata.findOne({_id: message.member?.id}).then((data: sn8.userdata) => {
-						message.reply("you have " + data.coins + " coins.")
+						if (!data) {message.reply("you don't have any coins.")}
+						else message.reply("you have " + data.coins + " coins.")
 					})
 				break
 				case 'coins':
 					userdata.findOne({_id: message.member?.id}).then((data: sn8.userdata) => {
-						message.reply("you have " + data.coins + " coins.")
+						if (!data) {message.reply("you don't have any coins.")}
+						else message.reply("you have " + data.coins + " coins.")
 					})
 				break
 				case 'options':

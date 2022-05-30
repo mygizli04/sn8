@@ -2,6 +2,7 @@ import * as sn8 from './interface'
 import * as utils from './utils'
 import * as discord from 'discord.js'
 import * as buttons from 'discord-buttons'
+import * as embed from './embeds'
 
 export let sneks: Array<sn8.snek> = []
 
@@ -47,12 +48,6 @@ export async function startSnek(channel: discord.TextChannel) {
 
 	})
 }
-
-
-
-
-
-
 
 setInterval(() => tickSneks(), 2000)
 
